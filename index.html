@@ -1,0 +1,356 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Klepon Jaya Shop</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #210505;
+  color: white;
+}
+
+/* HEADER */
+header {
+  background: #5c0b0b;
+  padding: 20px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #d4af37;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  color: #ffd700;
+  font-size: 23px;
+  font-weight: bold;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 15px;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: #ffd700;
+}
+
+/* HERO */
+.hero {
+  min-height: 480px;
+  padding: 90px 8%;
+  display: flex;
+  align-items: center;
+  background:
+    linear-gradient(90deg, #210505 20%, #210505aa),
+    url("klepon.jpg") center/cover;
+}
+
+.hero h1 {
+  color: #ffd700;
+  font-size: clamp(40px, 7vw, 70px);
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 10px #000;
+}
+
+.hero h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  color: #f2dede;
+  line-height: 1.7;
+  max-width: 500px;
+  margin-bottom: 25px;
+}
+
+/* BUTTON */
+.btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #ffd700, #b8860b);
+  color: #3d0808;
+  border: none;
+  padding: 13px 23px;
+  border-radius: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #fff0a8;
+  transform: scale(1.05);
+}
+
+/* SECTION */
+section {
+  padding: 60px 8%;
+}
+
+.judul {
+  text-align: center;
+  color: #ffd700;
+  font-size: 32px;
+  margin-bottom: 35px;
+}
+
+/* PRODUK */
+.produk-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.produk {
+  background: linear-gradient(145deg, #6b1010, #350707);
+  border: 1px solid #d4af37;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  transition: 0.3s;
+  box-shadow: 0 5px 20px #0005;
+}
+
+.produk:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 8px 25px #d4af3744;
+}
+
+.foto-produk {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 2px solid #d4af37;
+  margin-bottom: 18px;
+}
+
+.produk h3 {
+  color: #ffd700;
+  margin-bottom: 12px;
+}
+
+.produk p {
+  color: #f2dede;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.harga {
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* TENTANG */
+.tentang {
+  background: #4a0808;
+  text-align: center;
+  border-top: 1px solid #d4af37;
+  border-bottom: 1px solid #d4af37;
+}
+
+.tentang p {
+  color: #f2dede;
+  line-height: 1.8;
+  max-width: 650px;
+  margin: auto;
+}
+
+/* KONTAK */
+.kontak {
+  text-align: center;
+}
+
+.kontak p {
+  color: #f2dede;
+  margin-bottom: 20px;
+}
+
+/* FOOTER */
+footer {
+  background: #170303;
+  border-top: 1px solid #d4af37;
+  padding: 25px;
+  text-align: center;
+  color: #d8baba;
+  font-size: 13px;
+}
+
+/* HP */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  nav a {
+    margin: 5px;
+    font-size: 12px;
+  }
+
+  .hero {
+    padding: 70px 8%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">❤️ KLEPON JAYA SHOP</div>
+
+  <nav>
+    <a href="#beranda">Beranda</a>
+    <a href="#produk">Produk</a>
+    <a href="#tentang">Tentang</a>
+    <a href="#kontak">Kontak</a>
+  </nav>
+</header>
+
+<section class="hero" id="beranda">
+  <div>
+    <h1>KLEPON<br>JAYA SHOP</h1>
+
+    <h2>Manisnya Tradisi, Nikmatnya Klepon</h2>
+
+    <p>
+      Nikmati klepon tradisional dengan tekstur kenyal,
+      isian gula merah yang manis, dan balutan kelapa parut.
+      Dibuat dengan bahan berkualitas untuk menemani
+      setiap momen istimewa.
+    </p>
+
+    <a href="#produk" class="btn">Lihat Produk →</a>
+  </div>
+</section>
+
+<section id="produk">
+  <h2 class="judul">✨ PRODUK KLEPON ✨</h2>
+
+  <div class="produk-container">
+
+    <div class="produk">
+      <img src="klepon1.jpg"
+           alt="Klepon Original"
+           class="foto-produk">
+
+      <h3>Klepon Original</h3>
+      <p>Klepon pandan dengan gula merah dan kelapa parut.</p>
+      <div class="harga">Rp 10.000</div>
+
+      <button class="btn" onclick="pesan('Klepon Original')">
+        Beli Sekarang
+      </button>
+    </div>
+
+    <div class="produk">
+      <img src="klepon2.jpg"
+           alt="Klepon Gula Merah"
+           class="foto-produk">
+
+      <h3>Klepon Gula Merah</h3>
+      <p>Klepon kenyal dengan isian gula merah yang lezat.</p>
+      <div class="harga">Rp 12.000</div>
+
+      <button class="btn" onclick="pesan('Klepon Gula Merah')">
+        Beli Sekarang
+      </button>
+    </div>
+
+    <div class="produk">
+      <img src="klepon3.jpg"
+           alt="Klepon Pandan"
+           class="foto-produk">
+
+      <h3>Klepon Pandan</h3>
+      <p>Aroma pandan khas dengan balutan kelapa segar.</p>
+      <div class="harga">Rp 15.000</div>
+
+      <button class="btn" onclick="pesan('Klepon Pandan')">
+        Beli Sekarang
+      </button>
+    </div>
+
+    <div class="produk">
+      <img src="klepon4.jpg"
+           alt="Klepon Spesial"
+           class="foto-produk">
+
+      <h3>Klepon Spesial</h3>
+      <p>Klepon pilihan untuk acara keluarga dan oleh-oleh.</p>
+      <div class="harga">Rp 20.000</div>
+
+      <button class="btn" onclick="pesan('Klepon Spesial')">
+        Beli Sekarang
+      </button>
+    </div>
+
+  </div>
+</section>
+
+<section class="tentang" id="tentang">
+  <h2 class="judul">TENTANG KAMI</h2>
+
+  <p>
+    Klepon Jaya Shop adalah toko yang menyediakan klepon
+    tradisional dengan rasa manis, tekstur kenyal, dan
+    isian gula merah yang lezat. Kami menggunakan bahan
+    berkualitas untuk menghadirkan camilan khas Indonesia.
+    Cocok untuk camilan keluarga dan acara spesial.
+  </p>
+</section>
+
+<section class="kontak" id="kontak">
+  <h2 class="judul">HUBUNGI KAMI</h2>
+
+  <p>Ingin memesan klepon? Hubungi kami sekarang!</p>
+
+  <a class="btn"
+     href="https://wa.me/6285715337492"
+     target="_blank">
+    💬 Pesan via WhatsApp
+  </a>
+</section>
+
+<footer>
+  © 2026 Klepon Jaya Shop | Manisnya Tradisi, Nikmatnya Klepon ❤️
+</footer>
+
+<script>
+function pesan(namaProduk) {
+  const nomor = "6285715337492";
+
+  const teks =
+    "Halo Klepon Jaya Shop, saya ingin membeli "
+    + namaProduk + ".";
+
+  window.open(
+    "https://wa.me/" + 085715337492+
+    "?text=" + encodeURIComponent(teks),
+    "_blank"
+  );
+}
+</script>
+
+</body>
+</html>
